@@ -12,41 +12,28 @@ else:
     print('Fehler beim Installieren des Pakets:', result.stderr.decode())
 
 
+import subprocess
+import os
 
-# Setze die URL des GitHub-Repositorys und den Namen des Skripts
+# Setze das Git-Repository und den Pfad zum Skript
 repo_url = 'https://github.com/spikestone/projekts'
-script_name = 'testapp.py'
+script_path = 'projekts/testapp.py'
 
-# Erstelle den vollständigen Download-URL des Skripts
-download_url = f'{repo_url}/raw/master/{script_name}'
+# Wechsle in das Verzeichnis, in dem sich das Skript befindet
+os.chdir(os.path.dirname(script_path))
 
-# Lade den Inhalt des Skripts vom GitHub-Repository herunter
-response = requests.get(download_url)
-new_script_content = response.text
+# Hole die neueste Version des Repositorys
+subprocess.run(['git', 'fetch'])
 
-# Erstelle einen Hash des neuen Skriptinhalts
-new_script_hash = hashlib.md5(new_script_content.encode()).hexdigest()
+# Überprüfe, ob es eine neue Version des Skripts gibt
+result = subprocess.run(['git', 'rev-list', 'HEAD...origin/master', '--count'], stdout=subprocess.PIPE)
+num_commits_behind = int(result.stdout.decode('utf-8').strip())
+if num_commits_behind == 0:
+    print('Das Skript ist auf dem neuesten Stand.')
+    exit()
 
-# Prüfe, ob das lokale Skript aktualisiert werden muss
-if os.path.exists(script_name):
-    with open(script_name, 'r') as f:
-        current_script_content = f.read()
-    current_script_hash = hashlib.md5(current_script_content.encode()).hexdigest()
-    if current_script_hash == new_script_hash:
-        print('Das lokale Skript ist auf dem neuesten Stand.')
-        exit()
-    else:
-        print('Es gibt eine neue Version des Skripts. Das lokale Skript wird aktualisiert.')
-else:
-    print('Das lokale Skript wurde nicht gefunden. Es wird heruntergeladen.')
-
-# Speichere den Inhalt des neuen Skripts in einer temporären Datei
-temp_script_name = f'{script_name}.temp'
-with open(temp_script_name, 'w') as f:
-    f.write(new_script_content)
-
-# Ersetze das lokale Skript durch das neue Skript
-os.replace(temp_script_name, script_name)
+# Lade die neueste Version des Skripts herunter
+subprocess.run(['git', 'pull'])
 
 # Gib eine Meldung aus, dass das Skript aktualisiert wurde
 print('Das Skript wurde aktualisiert.')
