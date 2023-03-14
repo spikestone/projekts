@@ -6,3 +6,5 @@ if result.returncode == 0:
     print('Das Paket wurde erfolgreich installiert.')
 else:
     print('Fehler beim Installieren des Pakets:', result.stderr.decode())
+
+result = subprocess.run(["Python3","testapp.py" ], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
