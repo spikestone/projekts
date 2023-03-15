@@ -26,5 +26,5 @@ if %errorlevel% NEQ 0 (
     echo requests is installed on this system.
 )
 
-start /B pythonw.exe testappstarter.py
+start "" python3 testappstarter.py
 exit
