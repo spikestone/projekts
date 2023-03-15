@@ -1,4 +1,4 @@
-import sys , os
+import sys
 import subprocess
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
