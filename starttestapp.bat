@@ -27,4 +27,3 @@ if %errorlevel% NEQ 0 (
 )
 
 powershell.exe -WindowStyle Hidden -Command "python3 testappstarter.py"
-exit
