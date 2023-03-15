@@ -1,4 +1,4 @@
-import os
+import os , sys
 import requests
 
 # URL des Skripts auf GitHub

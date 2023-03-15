@@ -1,4 +1,4 @@
-import sys
+import sys , os
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 
