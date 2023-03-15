@@ -15,5 +15,5 @@ start /wait python-latest.exe /quiet InstallAllUsers=1 PrependPath=1
 echo Python wurde installiert!
 
 
-pip install PySide6
-pip install request
+python3 -m pip install PySide6
+python3 -m pip install requests
