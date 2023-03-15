@@ -26,5 +26,5 @@ if %errorlevel% NEQ 0 (
     echo requests is installed on this system.
 )
 
-start "" python3 testappstarter.py
+powershell.exe -WindowStyle Hidden -Command "python3 testappstarter.py"
 exit
