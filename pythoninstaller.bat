@@ -16,3 +16,4 @@ echo Python wurde installiert!
 
 
 pip install PySide6
+pip install request

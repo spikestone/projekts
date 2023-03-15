@@ -1,2 +1,2 @@
 @echo off
-python3 pythoninstallerapp.py
+python testappstarter.py
