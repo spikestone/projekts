@@ -25,3 +25,11 @@ else:
     with open(local_path, 'w') as file:
         file.write(response.text)
     print("Das Skript wurde heruntergeladen!")
+
+import subprocess
+
+# Name der Datei des Skripts, das ausgeführt werden soll
+script_file = "testapp.py"
+
+# Ausführen des Skripts im selben Verzeichnis wie dieses Skript
+subprocess.call(["python3", script_file])
