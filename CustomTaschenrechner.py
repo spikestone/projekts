@@ -11,7 +11,7 @@ class MainWindow(QWidget):
         schlank = "border: 1px solid black;"
         breit = "border: 2px solid black;"
         #label
-        self.label1 = QLabel("")
+        self.label1 = QLabel()
         self.label1.setStyleSheet(schlank)
         self.label2 = QLabel()
         self.label2.setStyleSheet("border: 2px solid black;")
