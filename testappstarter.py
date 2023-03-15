@@ -1,6 +1,7 @@
 import os
 import requests
 
+#mainhub
 # URL des Skripts auf GitHub
 github_url = "https://raw.githubusercontent.com/spikestone/projekts/main/testapp.py"
 # Pfad zur lokalen Datei des Skripts
@@ -25,7 +26,7 @@ else:
     with open(local_path, 'w') as file:
         file.write(response.text)
     print("Das Skript wurde heruntergeladen!")
-
+#Taschenrechner
 # URL des Skripts auf GitHub
 github_url = "https://raw.githubusercontent.com/spikestone/projekts/main/CustomTaschenrechner.py"
 # Pfad zur lokalen Datei des Skripts
