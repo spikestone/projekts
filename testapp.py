@@ -10,7 +10,7 @@ class MainWindow(QWidget):
         self.setWindowTitle("Programm Hub")
         #labels
         self.textlabel1 = QLabel("Costum Programme")
-        #Knöpfe zum drücken
+        #Knoepfe zum druecken
         self.Button1 = QPushButton("Taschenrechner")
         self.Button1.clicked.connect(self.on_button_click)
         self.Button2 = QPushButton("Leer")
