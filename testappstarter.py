@@ -81,7 +81,7 @@ else:
 
 import subprocess
 
-# Name der Datei des Skripts, das ausgeführt werden soll
+# Name der Datei des Skripts, das ausgefuehrt werden soll
 script_file = "testapp.py"
 
 # Ausfuehren des Skripts im selben Verzeichnis wie dieses Skript
