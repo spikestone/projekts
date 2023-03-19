@@ -8,7 +8,7 @@ github_url = "https://raw.githubusercontent.com/spikestone/projekts/main/testapp
 current_directory = os.getcwd()
 local_path = current_directory + "/testapp.py"
 
-# Überprüfen, ob die lokale Datei existiert
+# ueberpruefen, ob die lokale Datei existiert
 if os.path.isfile(local_path):
     # Herunterladen des Skripts von GitHub
     response = requests.get(github_url)
@@ -33,7 +33,7 @@ github_url = "https://raw.githubusercontent.com/spikestone/projekts/main/CustomT
 current_directory = os.getcwd()
 local_path = current_directory + "/CustomTaschenrechner.py"
 
-# Überprüfen, ob die lokale Datei existiert
+# ueberpruefen, ob die lokale Datei existiert
 if os.path.isfile(local_path):
     # Herunterladen des Skripts von GitHub
     response = requests.get(github_url)
@@ -59,7 +59,7 @@ github_url = "https://raw.githubusercontent.com/spikestone/projekts/main/inArbei
 current_directory = os.getcwd()
 local_path = current_directory + "/inArbeit.py"
 
-# Überprüfen, ob die lokale Datei existiert
+# ueberpruefen, ob die lokale Datei existiert
 if os.path.isfile(local_path):
     # Herunterladen des Skripts von GitHub
     response = requests.get(github_url)
