@@ -2,6 +2,7 @@ import sys
 import subprocess
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
+from PySide6.QtCore import *
 
 class MainWindow(QWidget):
     def __init__(self):
@@ -29,7 +30,7 @@ class MainWindow(QWidget):
         subprocess.call(["python3", "CustomTaschenrechner.py"])
 
 if __name__ == __name__:
-    app = QApplication(sys.argv)
+    app = QApplication([])
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
