@@ -15,6 +15,7 @@ class MainWindow(QWidget):
         self.Button1 = QPushButton("Taschenrechner")
         self.Button1.clicked.connect(self.on_button1_click)
         self.Button2 = QPushButton("in Arbeit")
+        self.Button2.clicked.connect(self.on_button2_click)
 
         #grid aka wie die ganzen widgets angeordnet sind
         layout = QGridLayout()
