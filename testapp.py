@@ -13,8 +13,8 @@ class MainWindow(QWidget):
         self.textlabel1 = QLabel("Costum Programme")
         #Knoepfe zum druecken
         self.Button1 = QPushButton("Taschenrechner")
-        self.Button1.clicked.connect(self.on_button_click)
-        self.Button2 = QPushButton("Leer")
+        self.Button1.clicked.connect(self.on_button1_click)
+        self.Button2 = QPushButton("in Arbeit")
 
         #grid aka wie die ganzen widgets angeordnet sind
         layout = QGridLayout()
@@ -26,8 +26,12 @@ class MainWindow(QWidget):
 
 
     #action bei knopfdruck
-    def on_button_click(self):
+    def on_button1_click(self):
         subprocess.call(["python3", "CustomTaschenrechner.py"])
+
+    def on_button2_click(self):
+        subprocess.call(["python3", "inArbeit.py"])
+
 
 if __name__ == __name__:
     app = QApplication([])
