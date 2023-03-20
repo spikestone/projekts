@@ -1,3 +1,4 @@
+import os
 import sys
 import subprocess
 from PySide6.QtWidgets import *
@@ -16,6 +17,8 @@ class MainWindow(QWidget):
         self.Button1.clicked.connect(self.on_button1_click)
         self.Button2 = QPushButton("in Arbeit")
         self.Button2.clicked.connect(self.on_button2_click)
+        self.Button3 = QPushButton("Tictactoe")
+        self.Button3.clicked.connect(self.on_button3_click)
 
         #grid aka wie die ganzen widgets angeordnet sind
         layout = QGridLayout()
@@ -23,6 +26,7 @@ class MainWindow(QWidget):
         layout.addWidget(self.textlabel1,0,0)
         layout.addWidget(self.Button1,1,0)
         layout.addWidget(self.Button2,2,0)
+        layout.addWidget(self.Button3,3,0)
 
 
 
@@ -32,6 +36,10 @@ class MainWindow(QWidget):
 
     def on_button2_click(self):
         subprocess.call(["python3", "inArbeit.py"])
+
+    def on_button3_click(self):
+        os.system("TicTacToeAndroid.exe")
+        pass
 
 
 if __name__ == __name__:
