@@ -39,7 +39,6 @@ class MainWindow(QWidget):
 
     def on_button3_click(self):
         os.system("TicTacToeAndroid.exe")
-        pass
 
 
 if __name__ == __name__:
