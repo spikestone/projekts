@@ -74,7 +74,7 @@ class MainWindow(QWidget):
         result = input_number1 - input_number2
         self.label2.setText(f'Das Ergebnis ist: {result}')
     def on_Mal_clicked(self):
-        self.label1.setText("-")
+        self.label1.setText("*")
         input1_text = self.Eingabe1.text()
         try:
             input_number1 = int(input1_text)
@@ -88,7 +88,7 @@ class MainWindow(QWidget):
         result = input_number1 * input_number2
         self.label2.setText(f'Das Ergebnis ist: {result}')
     def on_Geteilt_clicked(self):
-        self.label1.setText("-")
+        self.label1.setText("/")
         input1_text = self.Eingabe1.text()
         try:
             input_number1 = int(input1_text)
